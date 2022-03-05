@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Ringle - A change-ringing puzzle</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    
+  </head>
+  <body>
+    <!-- this is the start of content -->
+    <div id="game">
+      <header>
+        <div class="menu">
+          <button id="help-button" class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+              <path fill="var(--color-tone-3)" d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="title">
+          Ringle
+        </div>
+        <div class="menu">
+          <button id="info-button" class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+              <path fill="var(--color-tone-3)" d="M11 8h2v-2h-2v2z
+                                                  M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z
+                                                  m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z
+                                                  M11 10 h2 v8 h-2 v-8z"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <div id="board-container">
+        <div id="board">
+          <game-row letters length="6">
+            <div class="row">
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+            </div>
+          </game-row>
+          <game-row letters length="6">
+            <div class="row">
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+            </div>
+          </game-row>
+          <game-row letters length="6">
+            <div class="row">
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+            </div>
+          </game-row>
+          <game-row letters length="6">
+            <div class="row">
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+            </div>
+          </game-row>
+          <game-row letters length="6">
+            <div class="row">
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+            </div>
+          </game-row>
+          <game-row letters length="6">
+            <div class="row">
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+            </div>
+          </game-row>
+        </div>
+
+      </div>
+      <div id="keyboard">
+        <div class="row">
+          <button data-key="1">
+            1
+          </button>
+          <button data-key="2">
+            2
+          </button>
+          <button data-key="3">
+            3
+          </button>
+          <button data-key="4">
+            4
+          </button>
+          <button data-key="5">
+            5
+          </button>
+          <button data-key="6">
+            6
+          </button>
+        </div>
+        <div class="row">
+          <button data-key="↵" class="one-and-a-half">enter</button>
+          <button data-key="←" class="one-and-a-half">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+              <path fill=var(--color-tone-3) d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="overlay">
+        <div id="info-container" class="content">
+          <div id="help" class="content-container instructions">
+            <header>
+              <h1>
+                How to Play
+              </h1>
+              <game-icon class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                  <path fill="var(--color-tone-3)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                </svg>
+              </game-icon>
+              
+            </header>
+            <div class="content-container">
+              <p>
+                The tiles in this game represent six rows of a change-ringing method for eight bells.
+              </p>
+              <p>
+                Each row includes the numbers 1 through 8, and from one row to the next, each number must stay in the same position or move at most one place to the left or right.
+              </p>
+              <p>
+                Your task is to guess the current row in six tries. Each guess must have all eight numbers. Hit enter to submit a guess.
+              </p>
+              <p>
+                After each guess, the color of the tiles will change to show how close your guess is to that row.
+              </p>
+              <div class="examples">
+                <p>
+                  Examples
+                </p>
+                <div class="example">
+                  <div class="row">
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">2</div></game-tile>
+                    <game-tile><div class="tile" data-state="correct" data-animation="idle">1</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">4</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">3</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">6</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">5</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">8</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">7</div></game-tile>
+                  </div>
+                  <p>
+                    The number <strong>1</strong> is in the correct place in this row—remember that it might move one place in the next row!
+                  </p>
+                </div>
+                <div class="example">
+                  <div class="row">
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">2</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">1</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">4</div></game-tile>
+                    <game-tile><div class="tile" data-state="present" data-animation="idle">3</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">6</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">5</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">8</div></game-tile>
+                    <game-tile><div class="tile" data-state="present" data-animation="idle">7</div></game-tile>
+                  </div>
+                  <p>
+                    The number <strong>3</strong> is one place to the right or left of where you guessed it.
+                  </p>
+                  <p>
+                    The number <strong>7</strong> must be in seventh place—the rows do not wrap around.
+                  </p>
+                </div>
+                <div class="example">
+                  <div class="row">
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">2</div></game-tile>
+                    <game-tile><div class="tile" data-state="correct" data-animation="idle">1</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">4</div></game-tile>
+                    <game-tile><div class="tile" data-state="correct" data-animation="idle">3</div></game-tile>
+                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">6</div></game-tile>
+                    <game-tile><div class="tile" data-state="correct" data-animation="idle">5</div></game-tile>
+                    <game-tile><div class="tile" data-state="correct" data-animation="idle">8</div></game-tile>
+                    <game-tile><div class="tile" data-state="correct" data-animation="idle">7</div></game-tile>
+                  </div>
+                  <p>
+                    The numbers 2, 4, and 6 are at least two places away from where you guessed them to be.
+                  </p>
+                </div>
+              </div>
+              <p>
+                Refresh for a new puzzle!
+              </p>
+              <p>
+                You can learn about change ringing from the <a href="https://www.nagcr.org/#about-section" target="blank">North American Guild of Change Ringers</a> or the <a href="https://cccbr.org.uk/bellringing/what-is-bell-ringing/" target="blank">Central Council for Church Bell Ringers</a>.
+              </p>
+            </div>
+          </div>
+          <div id="info" class="content-container">
+            <header><h1>
+              About
+              </h1>
+              <game-icon class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                  <path fill="var(--color-tone-3)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                </svg>
+              </game-icon>
+            </header>
+            <p>
+              This <a href="https://powerlanguage.co.uk/wordle">Wordle</a>-inspired game was made by Alison Stevens.
+            </p>
+            <p>
+              Try out my other change-ringing games and resources at <a href="https://www.changeringing.net/home">www.changeringing.net/home</a>.
+            </p>
+            <p>
+              Tip me on <a href="https://paypal.me/ans204">paypal</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

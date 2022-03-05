@@ -9,246 +9,279 @@
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
-
-    <!-- import the webpage's javascript file -->
     
   </head>
   <body>
-    <!-- this is the start of content -->
     <div id="game">
       <header>
         <div class="menu">
-          <button id="help-button" class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24" id="help-button">
               <path fill="var(--color-tone-3)" d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"></path>
             </svg>
-          </button>
         </div>
         <div class="title">
           Ringle
         </div>
         <div class="menu">
-          <button id="info-button" class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-              <path fill="var(--color-tone-3)" d="M11 8h2v-2h-2v2z
-                                                  M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z
-                                                  m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z
-                                                  M11 10 h2 v8 h-2 v-8z"></path>
-            </svg>
-          </button>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24" id="settings-button">
+            <path fill="var(--color-tone-3)" d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"></path>
+          </svg>
         </div>
       </header>
-      <div id="board-container">
-        <div id="board">
-          <game-row letters length="8">
-            <div class="row">
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+      <div id="game-container">
+        <div id="guess-container" class="game-container">
+          <div class="board-container">
+            <div class="board">
+              <div class="game-row">
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+              </div>
+              <div class="game-row">
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+              </div>
+              <div class="game-row">
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+              </div>
+              <div class="game-row">
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+              </div>
+              <div class="game-row">
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+              </div>
+              <div class="game-row">
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+              </div>
             </div>
-          </game-row>
-          <game-row letters length="8">
+          </div>
+          <div class="keyboard">
             <div class="row">
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <button data-key="1">1</button>
+              <button data-key="2">2</button>
+              <button data-key="3">3</button>
+              <button data-key="4">4</button>
+              <button data-key="5">5</button>
+              <button data-key="6">6</button>
             </div>
-          </game-row>
-          <game-row letters length="8">
             <div class="row">
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
+              <button data-key="↵" class="one-and-a-half">enter</button>
+              <button data-key="←" class="one-and-a-half">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24">
+                  <path fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"/>
+                </svg>
+              </button>
             </div>
-          </game-row>
-          <game-row letters length="8">
-            <div class="row">
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-            </div>
-          </game-row>
-          <game-row letters length="8">
-            <div class="row">
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-            </div>
-          </game-row>
-          <game-row letters length="8">
-            <div class="row">
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-              <game-tile><div class="tile" data-state="empty" data-animation="idle"></div></game-tile>
-            </div>
-          </game-row>
+          </div>
         </div>
-
-      </div>
-      <div id="keyboard">
-        <div class="row">
-          <button data-key="1">
-            1
-          </button>
-          <button data-key="2">
-            2
-          </button>
-          <button data-key="3">
-            3
-          </button>
-          <button data-key="4">
-            4
-          </button>
-          <button data-key="5">
-            5
-          </button>
-          <button data-key="6">
-            6
-          </button>
-          <button data-key="7">
-            7
-          </button>
-          <button data-key="8">
-            8
-          </button>
-        </div>
-        <div class="row">
-          <button data-key="↵" class="one-and-a-half">enter</button>
-          <button data-key="←" class="one-and-a-half">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-              <path fill=var(--color-tone-3) d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"/>
-            </svg>
-          </button>
+        <div id="solution-container" class="game-container">
+          <div class="board-container">
+            <div class="board">
+              <div class="game-row">
+                <div class="game-tile current"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+              </div>
+              <div class="game-row">
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+              </div>
+              <div class="game-row">
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+              </div>
+              <div class="game-row">
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+              </div>
+              <div class="game-row">
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+              </div>
+              <div class="game-row">
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+                <div class="game-tile"></div>
+              </div>
+            </div>
+          </div>
+          <div class="keyboard">
+            <div class="row">
+              <button data-key="1">1</button>
+              <button data-key="2">2</button>
+              <button data-key="3">3</button>
+              <button data-key="4">4</button>
+              <button data-key="5">5</button>
+              <button data-key="6">6</button>
+            </div>
+            <div class="row">
+              <button data-key="ArrowLeft" class="one-and-a-half">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24">
+                  <path fill="var(--color-tone-1)" d="M16,16 v-8 l-8,4 l8,4z" />
+                </svg>
+              </button>
+              <button data-key="ArrowUp" class="one-and-a-half">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24">
+                  <path fill="var(--color-tone-1)" d="M8,16 h8 l-4,-8 l-4,8z" />
+                </svg>
+              </button>
+              <button data-key="ArrowDown" class="one-and-a-half">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24">
+                  <path fill="var(--color-tone-1)" d="M8,8 h8 l-4,8 l-4,-8z" />
+                </svg>
+              </button>
+              <button data-key="ArrowRight" class="one-and-a-half">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24">
+                  <path fill="var(--color-tone-1)" d="M8,16 v-8 l8,4 l-8,4z" />
+                </svg>
+              </button>
+              <button data-key="←" class="one-and-a-half">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24">
+                  <path fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div id="overlay">
-        <div id="info-container" class="content">
-          <div id="help" class="content-container instructions">
-            <header>
-              <h1>
-                How to Play
-              </h1>
-              <game-icon class="close">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                  <path fill="var(--color-tone-3)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-                </svg>
-              </game-icon>
+        <div id="help" class="content">
+          <header>
+            <h1>
+              How to Play
+            </h1>
               
-            </header>
-            <div class="content-container">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24" class="game-icon close">
+              <path fill="var(--color-tone-3)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+          </header>
+          <div>
+            <p>
+              The tiles in this game represent places of bells in a change-ringing method.
+            </p>
+            <p>
+              Each row includes every bell once, and from one row to the next, each number must stay in the same position or move at most one place to the left or right. No two rows are the same!
+            </p>
+            <p>
+              Your task is to guess the current row in six tries. Each guess must have all <span class="stage">six</span> numbers. Hit enter to submit a guess.
+            </p>
+            <p>
+              After each guess, the color of the tiles will change to show how close your guess is to that row.
+            </p>
+            <p id="notes">
+              The extra board on the right is provided for taking notes on where the bells actually are. Hold shift while typing a number for it to appear on the right-hand board rather than on the game board.
+            </p>
+            <div class="examples">
               <p>
-                The tiles in this game represent six rows of a change-ringing method for eight bells.
+                Examples
               </p>
-              <p>
-                Each row includes the numbers 1 through 8, and from one row to the next, each number must stay in the same position or move at most one place to the left or right.
-              </p>
-              <p>
-                Your task is to guess the current row in six tries. Each guess must have all eight numbers. Hit enter to submit a guess.
-              </p>
-              <p>
-                After each guess, the color of the tiles will change to show how close your guess is to that row.
-              </p>
-              <div class="examples">
+              <div class="example">
+                <div class="game-row">
+                  <div class="game-tile" data-state="tbd">2</div>
+                  <div class="game-tile" data-state="correct">1</div>
+                  <div class="game-tile" data-state="tbd">4</div>
+                  <div class="game-tile" data-state="tbd">3</div>
+                  <div class="game-tile" data-state="tbd">6</div>
+                  <div class="game-tile" data-state="tbd">5</div>
+                </div>
                 <p>
-                  Examples
-                </p>
-                <div class="example">
-                  <div class="row">
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">2</div></game-tile>
-                    <game-tile><div class="tile" data-state="correct" data-animation="idle">1</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">4</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">3</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">6</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">5</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">8</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">7</div></game-tile>
-                  </div>
-                  <p>
                     The number <strong>1</strong> is in the correct place in this row—remember that it might move one place in the next row!
                   </p>
-                </div>
-                <div class="example">
-                  <div class="row">
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">2</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">1</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">4</div></game-tile>
-                    <game-tile><div class="tile" data-state="present" data-animation="idle">3</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">6</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">5</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">8</div></game-tile>
-                    <game-tile><div class="tile" data-state="present" data-animation="idle">7</div></game-tile>
-                  </div>
-                  <p>
-                    The number <strong>3</strong> is one place to the right or left of where you guessed it.
-                  </p>
-                  <p>
-                    The number <strong>7</strong> must be in seventh place—the rows do not wrap around.
-                  </p>
-                </div>
-                <div class="example">
-                  <div class="row">
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">2</div></game-tile>
-                    <game-tile><div class="tile" data-state="correct" data-animation="idle">1</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">4</div></game-tile>
-                    <game-tile><div class="tile" data-state="correct" data-animation="idle">3</div></game-tile>
-                    <game-tile><div class="tile" data-state="tbd" data-animation="idle">6</div></game-tile>
-                    <game-tile><div class="tile" data-state="correct" data-animation="idle">5</div></game-tile>
-                    <game-tile><div class="tile" data-state="correct" data-animation="idle">8</div></game-tile>
-                    <game-tile><div class="tile" data-state="correct" data-animation="idle">7</div></game-tile>
-                  </div>
-                  <p>
-                    The numbers 2, 4, and 6 are at least two places away from where you guessed them to be.
-                  </p>
-                </div>
               </div>
-              <p>
-                Refresh for a new puzzle!
-              </p>
-              <p>
-                You can learn about change ringing from the <a href="https://www.nagcr.org/#about-section" target="blank">North American Guild of Change Ringers</a> or the <a href="https://cccbr.org.uk/bellringing/what-is-bell-ringing/" target="blank">Central Council for Church Bell Ringers</a>.
-              </p>
+              <div class="example">
+                <div class="game-row">
+                  <div class="game-tile" data-state="tbd">2</div>
+                  <div class="game-tile" data-state="tbd">1</div>
+                  <div class="game-tile" data-state="tbd">4</div>
+                  <div class="game-tile" data-state="present">3</div>
+                  <div class="game-tile" data-state="tbd">6</div>
+                  <div class="game-tile" data-state="present">5</div>
+                </div>
+                <p>
+                  The number <strong>3</strong> is one place to the right or left of where you guessed it.
+                </p>
+                <p>
+                  The number <strong>5</strong> must be in fifth place—the rows do not wrap around. (This also indicates that the 3 must be in third place, since fifth place is occupied.)
+                </p>
+              </div>
+              <div class="example">
+                <div class="game-row">
+                  <div class="game-tile" data-state="tbd">2</div>
+                  <div class="game-tile" data-state="correct">1</div>
+                  <div class="game-tile" data-state="tbd">4</div>
+                  <div class="game-tile" data-state="correct">3</div>
+                  <div class="game-tile" data-state="correct">6</div>
+                  <div class="game-tile" data-state="correct">5</div>
+                </div>
+                <p>
+                  The numbers <strong>2</strong> and <strong>4</strong> are at least two places away from where you guessed them to be. Since they are the only ones incorrect in this row, they must just trade places (in this row).
+                </p>
+              </div>
             </div>
+            <p>
+              Refresh for a new puzzle!
+            </p>
+            <p>
+              You can learn about change ringing from the <a href="https://www.nagcr.org/#about-section" target="blank">North American Guild of Change Ringers</a> or the <a href="https://cccbr.org.uk/bellringing/what-is-bell-ringing/" target="blank">Central Council for Church Bell Ringers</a>.
+            </p>
+            <p>
+              <strong>Extra tips</strong> (these probably won't make sense unless you are a ringer):
+              <!--<ul>
+                <li>Working bells are scrambled, but any hunt bells maintain their path as if it were a plain course. The treble will be a hunt bell the majority of the time AND if you happen to get Grandsire Minor, the 2 will be the second hunt bell though the rest of the bells probably won't be in plain course positions.</li>
+                <li>The first row of the puzzle is always a handstroke!</li>
+              </ul>-->
+            </p>
           </div>
-          <div id="info" class="content-container">
-            <header><h1>
-              About
-              </h1>
-              <game-icon class="close">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                  <path fill="var(--color-tone-3)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-                </svg>
-              </game-icon>
-            </header>
+          <div>
             <p>
               This <a href="https://powerlanguage.co.uk/wordle">Wordle</a>-inspired game was made by Alison Stevens.
             </p>
@@ -260,9 +293,72 @@
             </p>
           </div>
         </div>
+        <div id="settings" class="content">
+          <header>
+            <h1>
+              Settings
+            </h1>
+              
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24" class="game-icon close">
+              <path fill="var(--color-tone-3)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+          </header>
+          <div>
+            <div class="text">
+              Number of bells
+            </div>
+            <div class="control" id="stage">
+              <div class="stage-tile selected">
+                6
+              </div>
+              <div class="stage-tile">
+                8
+              </div>
+            </div>
+          </div>
+          <div id="hardsetting">
+            <div class="text">
+              Hard mode
+            </div>
+            <div class="control" id="hard-mode">
+              <div class="switch">
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="text">
+              Dark theme
+            </div>
+            <div class="control" id="dark-theme">
+              <div class="switch">
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="dialog">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24" class="game-icon dialogclose">
+          <path fill="var(--color-tone-3)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+        </svg>
+        <div id="method">
+          
+        </div>
+      </div>
+      <div id="resetdialog" class="dialog">
+        Abandon current game?
+        <div class="row">
+          <button id="resetbutton">
+            OK
+          </button>
+          <button class="cancel">
+            cancel
+          </button>
+        </div>
+        
       </div>
     </div>
-    
     
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
