@@ -95,7 +95,8 @@ function dimensions() {
 
 function buildanswer() {
   gameover = false;
-  rownum = 0, place = 0;
+  rownum = 0, place = 0, check = 0;
+  board = [[]];
   rowArr = [];
   let startrow = [];
   for (let p = 1; p <= stage; p++) {
@@ -154,15 +155,11 @@ function loadMethods() {
     let played = localStorage.getItem("played");
     let arr;
     if (played) {
-      arr = played.split(",").map(n => Number(n));
-      while (arr.includes(num)) {
+      arr = played.split(";");
+      while (arr.includes(data[num].name)) {
         num = Math.floor(Math.random() * data.length);
       }
       
-      arr.push(num);
-      if (arr.length === data.length) arr = [num];
-    } else {
-      arr = [num];
     }
     method = data[num];
     let search = {
@@ -368,6 +365,7 @@ function evaluate() {
           $("#method").prepend(`<p>🎉🎉🎉</p>`);
           $("#dialog").show();
           gameover = true;
+          saveplayed(method.name);
         }, 500);
       } else {
         rownum++;
@@ -376,6 +374,7 @@ function evaluate() {
           $("#method").prepend(`<p>Oh no, no more guesses!</p>`);
           $("#dialog").show();
           gameover = true;
+            saveplayed(method.name);
         }, 500);
         } else {
           board.push([]);
@@ -388,6 +387,18 @@ function evaluate() {
     }
   }
   
+}
+
+function saveplayed(name) {
+  let arr;
+  if (localStorage.getItem("played")) {
+    arr = localStorage.getItem("played").split(";");
+  } else {
+    arr = [];
+  }
+  arr.push(name);
+  if (arr.length > 200) arr.shift();
+  localStorage.setItem("played", arr.join(";"));
 }
 
 function stagechange(n) {
