@@ -140,7 +140,7 @@ function loadMethods() {
   $(".board .game-tile").attr("data-state", "").text("");
   $(".keyboard .button").attr("data-state", "");
   $(".board .game-row").css("grid-template-columns", "repeat("+(stage)+", 1fr)");
-  $.get(stage === 8 ? "methods.json" : "minor.json", function(data) {
+  $.get(stage === 8 ? "/ringle/methods.json" : "/ringle/minor.json", function(data) {
     if (stage === 8 && easymode) {
       data = data.filter(m => {
         let i = 0;
